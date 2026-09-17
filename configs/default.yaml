@@ -1,0 +1,22 @@
+# DocVision AI - default configuration
+# These are sensible defaults used when the user does not override them
+# via the Streamlit "Processing Controls" panel.
+
+processing:
+  max_width: 1000          # images are downscaled to this width before expensive CV ops
+  detection_sensitivity: 50 # 0-100, maps to Canny thresholds
+  enhancement_strength: 50  # 0-100, maps to denoise/CLAHE intensity
+  threshold_method: "adaptive_gaussian"  # one of: adaptive_gaussian, adaptive_mean, otsu, none
+
+ocr:
+  enabled: true
+  language: "eng"
+  min_confidence: 0
+
+detection:
+  min_area_ratio: 0.15     # a candidate contour must cover at least this fraction of the image
+  approx_epsilon_ratio: 0.02
+
+app:
+  title: "DocVision AI"
+  subtitle: "Computer Vision Document Scanner & Intelligence"
